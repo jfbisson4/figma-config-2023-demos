@@ -1,0 +1,8 @@
+{
+  "name": "Bootloader Hello World",
+  "api": "1.0.0",
+  "main": "bootloader.js",
+  "editorType": [
+    "figma"
+  ]
+}

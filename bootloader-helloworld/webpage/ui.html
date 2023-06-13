@@ -1,0 +1,18 @@
+<button>Click Me</button>
+<script>
+  function postMessage(pluginMessage) {
+    parent.postMessage({ pluginMessage, pluginId: '*' }, '*');
+  }
+
+  (async () => {
+    // Bootload code
+    await fetch('./code.js')
+      .then(response => response.text())
+      .then(code => postMessage(code));
+
+    // Setup event handlers
+    document.querySelector('button').onclick = () => {
+      postMessage('Hello World!');
+    }
+  })()
+</script>
