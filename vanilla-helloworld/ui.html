@@ -1,0 +1,10 @@
+<button>Click Me</button>
+<script>
+  function postMessage(pluginMessage) {
+    parent.postMessage({ pluginMessage, pluginId: '*' }, '*');
+  }
+
+  document.querySelector('button').onclick = () => {
+    postMessage('Hello World!');
+  }
+</script>
